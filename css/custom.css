@@ -116,13 +116,13 @@ button {
 }
 
 #contact form {
-    color: #00FFAD;
+    color: #0073ff;
 }
 
 #contact form input,
 #contact form textarea {
     background: transparent;
-    border: 1px solid #00FFAD;
+    border: 1px solid #0073ff;
     color: #ffffff;
 }
 
@@ -153,6 +153,31 @@ button {
 #copyright #social-media a:hover i {
     color: #ffffff;
 }
+
+.flight-slogan {
+    font-style: italic;
+}
+
+.display-5 {
+    font-size:2rem;
+    font-weight:200;
+    line-height:1.1
+}
+
+.cta-white {
+    border: 2px solid #192440 !important;
+    color: #192440;
+    background-color: white;
+}
+
+.cta-white:hover {
+    color: #ffffff;
+    background: #3a518a;
+}
+
+/* .list-unstyled li:nth-child(2n) {
+    background-color: red;
+} */
 
 /********** RWD **********/
 @media (max-width: 575px) {
