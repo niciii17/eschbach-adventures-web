@@ -19,6 +19,7 @@
     
     <!-- AOS -->
     <link rel="stylesheet" href="css/aos.css">
+
 </head>
 
 <body>
@@ -43,6 +44,11 @@
                 Discover the Alps from a whole new perspective – up in the air!
             </p>
             <!-- <a href="#" data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="btn my-4 font-weight-bold atlas-cta cta-blue">Book now</a> -->
+        </div>
+        <div class="arrow-down">
+            <a href="#section-flights">
+                <img src="img/arrow_down_white.png" alt="Girl in a jacket">
+            </a>
         </div>
     </div>
 
@@ -105,10 +111,10 @@
     </div>
  -->
     <!-- price table -->
-    <div class="container my-5 py-2" id="price-table">
+    <div class="container my-5 py-2" id="section-flights">
         <h2 class="text-center font-weight-bold d-block mb-3">Available Flights</h2>
         <div class="row">
-            <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5">
+            <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-4">
                 <h4 class="my-4">Classic Flight</h4>
                 <h5 class="my-4 flight-slogan">Glide into adventure – your journey starts here. </h5>
                 <p class="font-weight-bold"><span class="display-2 font-weight-bold">190.-</span>CHF</p>
@@ -116,11 +122,11 @@
                     <li>10 - 20 minutes flight duration</li>
                     <li>Total trip time 2h</li>
                     <li>excl. transport to takeoff</li>
-                    <li>Photo + Video Package + 40.- CHF</li>
+                    <li>Photo & Video Package +40.- CHF</li>
                 </ul>
                 <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-ghost">Book Now</a>
             </div>
-            <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5 rounded" id="price-table__premium">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-4 rounded" id="price-table__premium">
                 <h4 class="my-4">Ultimate Flight</h4>
                 <h5 class="my-4 flight-slogan">Go higher, stay longer, see more. </h5>
                 <p class="font-weight-bold"><span class="display-2 font-weight-bold">260.-</span>CHF</p>
@@ -128,11 +134,11 @@
                     <li>20 - 30 minutes flight duration</li>
                     <li>Total trip time 3h</li>
                     <li>excl. transport to takeoff</li>
-                    <li>Photo + Video Package + 40.- CHF</li>
+                    <li>Photo & Video Package +40.- CHF</li>
                 </ul>
                 <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-white">Book Now</a>
             </div>
-            <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5">
+            <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-4">
                 <h4 class="my-4">Hike & Fly Adventure</h4>
                 <h5 class="my-4 flight-slogan">Hike up, fly down – the adventure of a lifetime.</h5>
                 <p class="font-weight-bold"><span class="display-5 font-weight-bold">Contact for pricing</span></p>
@@ -141,7 +147,7 @@
                     <li>Total trip time 3h-5h</li>
                     <li>excl. transport to takeoff</li>
                     <li>good physical conditions mendatory</li>
-                    <li>Photo + Video Package + 40.- CHF</li>
+                    <li>Photo & Video Package +40.- CHF</li>
                 </ul>
                 <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-ghost">Book Now</a>
             </div>
@@ -174,10 +180,10 @@
     </div>
     -->
     <!-- contact -->
-    <div class="jumbotron jumbotron-fluid" id="contact" style="background-image: url(img/contact-bk.jpg);">
+    <div class="jumbotron jumbotron-fluid" id="contact" style="background-image: url(img/contact-banner.jpg);">
         <div class="container my-5">
             <div class="row justify-content-between">
-                <div class="col-md-6 text-white">
+                <div class="col-md-6 text-blue">
                     <h2 class="font-weight-bold">Contact me</h2>
                     <!-- <p class="my-4">
                         Te iisque labitur eos, nec sale argumentum scribentur,
@@ -190,27 +196,40 @@
                     </ul>
                 </div>
                 <div class="col-md-6">
-                    <form>
-                    	<div class="row">
+                    <form id="contactForm" onsubmit="return handleSubmit()">                    	
+                        <div class="row">
 	                        <div class="form-group col-md-6">
 	                            <label for="name">Your Name</label>
 	                            <input type="name" class="form-control" id="name">
 	                        </div>
 	                        <div class="form-group col-md-6">
 	                            <label for="Email">Your Email</label>
-	                            <input type="email" class="form-control" id="Email">
+	                            <input type="email" class="form-control" id="email">
 	                        </div>
 	                    </div>
 	                    <div class="form-group">
 	                        <label for="message">Message</label>
 	                        <textarea class="form-control" id="message" rows="3"></textarea>
 	                    </div>
-                        <button type="submit" class="btn font-weight-bold atlas-cta atlas-cta-wide cta-white my-3">Submit</button>
+                        <button type="submit" class="btn font-weight-bold atlas-cta atlas-cta-wide cta-blue my-3">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        function handleSubmit() {
+            var name = encodeURIComponent(document.getElementById('name').value);
+            var email = encodeURIComponent(document.getElementById('email').value);
+            var message = encodeURIComponent(document.getElementById('message').value);
+
+            var mailtoLink = `mailto:nicola.eschbach@hotmail.com?subject=Contact%20Form%20Eschback-Adventures&body=${message}%0A%0AName:%20${name}%0AEmail:%20${email}%0A%0A`;
+            
+            window.location.href = mailtoLink;
+            return false;
+        }
+    </script>
 
 	<!-- copyright -->
 	<div class="jumbotron jumbotron-fluid" id="copyright">

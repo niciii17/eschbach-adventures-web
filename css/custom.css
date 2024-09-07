@@ -1,4 +1,9 @@
 /********** common setting **********/
+
+html {
+    scroll-behavior: smooth;
+}
+
 h2 {
     font-size: 2.8rem !important;
     font-weight: 700;
@@ -98,6 +103,10 @@ button {
     padding-bottom: 4rem !important;
 }
 
+.text-blue {
+    color: #192440 !important;
+}
+
 #price-table__premium {
     background: #192440;
     color: #ffffff;
@@ -117,14 +126,14 @@ button {
 }
 
 #contact form {
-    color: #0073ff;
+    color: #333333;
 }
 
 #contact form input,
 #contact form textarea {
     background: transparent;
-    border: 1px solid #0073ff;
-    color: #ffffff;
+    border: 1px solid #333333;
+    color: #192440;
 }
 
 /********** copyright **********/
@@ -148,11 +157,14 @@ button {
 }
 
 #copyright #social-media a:hover {
-    background: #00FFAD;
+    background: #192440;
+    outline: solid #ffffff;
 }
 
 #copyright #social-media a:hover i {
     color: #ffffff;
+
+
 }
 
 .flight-slogan {
@@ -173,16 +185,62 @@ button {
 
 .cta-white:hover {
     color: #ffffff;
-    background: #3a518a;
+    background: #192440;
+    outline: solid #ffffff;
+
 }
 
 /* .list-unstyled li:nth-child(2n) {
     background-color: red;
 } */
 
+.list-unstyled li {
+    padding: 8px 0;
+}
+
+.arrow-down {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center;  
+}
+
+.arrow-down img{
+    height: 3em; /* 1em makes the image height equal to the line height */
+    vertical-align: middle; 
+    animation: moveUpDown 2s infinite ease-in-out;
+}
+
+.arrow-down:hover {
+    animation: zoomIn 0.5s forwards; /* Trigger animation on hover */
+}
+
 /********** RWD **********/
 @media (max-width: 575px) {
     #banner h1 {
         font-size: 3.6rem;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes moveUpDown {
+    0%, 30% {
+        transform: translateY(0); /* Initial position, stays here for 1s (30% of 3s) */
+    }
+    50% {
+        transform: translateY(-10px); /* Move up */
+    }
+    70%, 100% {
+        transform: translateY(0); /* Move back and stay for 1s */
     }
 }
