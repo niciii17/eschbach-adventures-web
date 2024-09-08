@@ -21,26 +21,14 @@
     <link rel="stylesheet" href="css/aos.css">
     <script src="https://www.google.com/recaptcha/api.js?render=6Lc7njkqAAAAALOCCjHUqeK8Lwtdi7jxjjdP4Qyf"></script>
     <script>
-
-grecaptcha.ready(function() {
-    e.preventDefault();
-    grecaptcha.enterprise.ready(async () => {
-      const token = await grecaptcha.enterprise.execute('6Lc7njkqAAAAALOCCjHUqeK8Lwtdi7jxjjdP4Qyf', {action: 'contact_form'});
-      document.getElementById('g-recaptcha-response').value = token;
-
-    });
-  });
-
-
-
-        // grecaptcha.ready(function() {
-        //     // the action: value doesn't matter, it's just a string (see the docs)
-        //     grecaptcha.execute('6Lc7njkqAAAAALOCCjHUqeK8Lwtdi7jxjjdP4Qyf', {action: 'contact_form'})
-        //     .then(function(token) {
-        //         // this is the important part, store the token so it gets sent back to us
-        //         document.getElementById('g-recaptcha-response').value = token;
-        //     });
-        // });
+        grecaptcha.ready(function() {
+            // the action: value doesn't matter, it's just a string (see the docs)
+            grecaptcha.execute('6Lc7njkqAAAAALOCCjHUqeK8Lwtdi7jxjjdP4Qyf', {action: 'contact_form'})
+            .then(function(token) {
+                // this is the important part, store the token so it gets sent back to us
+                document.getElementById('g-recaptcha-response').value = token;
+            });
+        });
     </script>
 </head>
 
@@ -53,9 +41,6 @@ grecaptcha.ready(function() {
                     <div class="col-2">
                         <img src="img/logo.png" alt="logo" >
                     </div>
-<!--                     <div class="col-6 align-self-center text-right">
-                        <a href="#" class="text-white lead">Get Early Access</a>
-                    </div> -->
                 </div>
             </header>
             <h1 data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="display-3 text-white font-weight-bold my-5">
@@ -264,12 +249,12 @@ grecaptcha.ready(function() {
         //     window.location.href = mailtoLink;
         //     return false;
         // }
-        const form = document.getElementById('contactForm');
+        // const form = document.getElementById('contactForm');
 
-        form.addEventListener('submit', function(event) {
+        // form.addEventListener('submit', function(event) {
 
-            form.reset();
-        });
+        //     form.reset();
+        // });
     </script>
 
 	<!-- copyright -->
