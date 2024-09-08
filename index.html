@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Eschbach Adventures</title>
     <meta name="description" content="Paragliding with Eschbach Adventures">
-    <meta name="viewport" 
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <link rel="icon" href="img/favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="img/favicon-16x16.png" sizes="16x16" type="image/png">
 
@@ -14,40 +14,43 @@
     <link rel="stylesheet" href="css/custom.css">
     <!-- bootstrap.min.css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-	<!-- font-awesome -->
+    <!-- font-awesome -->
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-    
+
     <!-- AOS -->
     <link rel="stylesheet" href="css/aos.css">
     <script src="https://www.google.com/recaptcha/api.js?render=6Lc7njkqAAAAALOCCjHUqeK8Lwtdi7jxjjdP4Qyf"></script>
     <script>
-        grecaptcha.ready(function() {
+        grecaptcha.ready(function () {
             // the action: value doesn't matter, it's just a string (see the docs)
-            grecaptcha.execute('6Lc7njkqAAAAALOCCjHUqeK8Lwtdi7jxjjdP4Qyf', {action: 'contact_form'})
-            .then(function(token) {
-                // this is the important part, store the token so it gets sent back to us
-                document.getElementById('g-recaptcha-response').value = token;
-            });
+            grecaptcha.execute('6Lc7njkqAAAAALOCCjHUqeK8Lwtdi7jxjjdP4Qyf', { action: 'contact_form' })
+                .then(function (token) {
+                    // this is the important part, store the token so it gets sent back to us
+                    document.getElementById('g-recaptcha-response').value = token;
+                });
         });
     </script>
 </head>
 
 <body>
     <!-- banner     -->
-    <div class="jumbotron jumbotron-fluid" id="banner" style="height: 100vh; background-image: url(img/background-banner.jpg);">
+    <div class="jumbotron jumbotron-fluid" id="banner"
+        style="height: 100vh; background-image: url(img/background-banner.jpg);">
         <div class="container text-center text-md-left">
             <header>
                 <div class="row justify-content-between">
                     <div class="col-2">
-                        <img src="img/logo.png" alt="logo" >
+                        <img src="img/logo.png" alt="logo">
                     </div>
                 </div>
             </header>
-            <h1 data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="display-3 text-white font-weight-bold my-5">
-            	Fly
+            <h1 data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"
+                class="display-3 text-white font-weight-bold my-5">
+                Fly
                 with me
             </h1>
-            <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="lead text-white my-4">
+            <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"
+                class="lead text-white my-4">
                 Discover the Alps from a whole new perspective – up in the air!
             </p>
             <!-- <a href="#" data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="btn my-4 font-weight-bold atlas-cta cta-blue">Book now</a> -->
@@ -121,7 +124,8 @@
     <div class="container my-5 py-2" id="section-flights">
         <h2 class="text-center font-weight-bold d-block mb-3">Available Flights</h2>
         <div class="row">
-            <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-4">
+            <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true"
+                class="col-md-4 text-center py-4 mt-4">
                 <h4 class="my-4">Classic Flight</h4>
                 <h5 class="my-4 flight-slogan">Glide into adventure – your journey starts here. </h5>
                 <p class="font-weight-bold"><span class="display-2 font-weight-bold">190.-</span>CHF</p>
@@ -133,7 +137,8 @@
                 </ul>
                 <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-ghost">Book Now</a>
             </div>
-            <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-4 rounded" id="price-table__premium">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"
+                class="col-md-4 text-center py-4 mt-4 rounded" id="price-table__premium">
                 <h4 class="my-4">Ultimate Flight</h4>
                 <h5 class="my-4 flight-slogan">Go higher, stay longer, see more. </h5>
                 <p class="font-weight-bold"><span class="display-2 font-weight-bold">260.-</span>CHF</p>
@@ -145,7 +150,8 @@
                 </ul>
                 <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-white">Book Now</a>
             </div>
-            <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-4">
+            <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true"
+                class="col-md-4 text-center py-4 mt-4">
                 <h4 class="my-4">Hike & Fly Adventure</h4>
                 <h5 class="my-4 flight-slogan">Hike up, fly down – the adventure of a lifetime.</h5>
                 <p class="font-weight-bold"><span class="display-5 font-weight-bold">Contact for pricing</span></p>
@@ -164,10 +170,10 @@
     <div class="container my-5 py-2" id="section-images">
     </div>
 
-    
+
     <div class="jumbotron jumbotron-fluid">
         <h2 class="text-center font-weight-bold d-block mb-3">Impressions</h2>
-       <div class="container-fluid">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-2 col-md-3 py-1 align-self-center">
                     <img src="img/slider_images/imagecarousel-01.jpg" class="mx-auto d-block img-resize">
@@ -185,7 +191,7 @@
                     <img src="img/slider_images/imagecarousel-08.jpg" class="mx-auto d-block img-resize">
                 </div>
             </div>
-        </div> 
+        </div>
     </div>
 
     <!-- contact -->
@@ -204,83 +210,71 @@
                     </ul>
                 </div>
                 <div class="col-md-6">
-                    <!-- <form id="contactForm" onsubmit="return handleSubmit()">                    	 -->
-                        <form 
-                            id="contactForm"
-                            action="https://formkeep.com/f/64eb0a96356a"
-                            accept-charset="UTF-8"
-                            enctype="multipart/form-data"
-                            method="POST"
-                            onsubmit="return handleSubmit()"
-                            target="_blank">
-                            <input type="hidden" name="utf8" value="✓">
+                    <!-- <form id="contactForm" onsubmit="return handleSubmit()">    -->
 
+                    <form class="contactForm" target="_blank" enctype="multipart/form-data"
+                        action="https://formkeep.com/f/64eb0a96356a" accept-charset="UTF-8"
+                        onsubmit="handleSubmit(this);" method="post">
+
+                        <input type="hidden" name="utf8" value="✓">
                         <div class="row">
-	                        <div class="form-group col-md-6">
-	                            <label for="name">Your Name</label>
-	                            <input type="name" class="form-control" id="name">
-	                        </div>
-	                        <div class="form-group col-md-6">
-	                            <label for="email-address">Your Email</label>
-	                            <input type="email" class="form-control" id="email" id="email-address">
-	                        </div>
-	                    </div>
-	                    <div class="form-group">
-	                        <label for="message">Message</label>
-	                        <textarea class="form-control" id="message" rows="3"></textarea>
-	                    </div>
+                            <div class="form-group col-md-6">
+                                <label for="name">Your Name *</label>
+                                <input type="text" name="name" id="name" required="required" autofocus="autofocus" class="form-control" />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label title="required" for="email">Your Email *</label>
+                                <input type="email" name="email" id="email" required="required" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label title="required" for="message">Message *</label>
+                            <textarea name="message" id="message" rows="3" required="required"
+                                class="form-control"></textarea>
+                        </div>
                         <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
-
-                        <button type="submit" class="btn font-weight-bold atlas-cta atlas-cta-wide cta-blue my-3">Submit</button>
+                        <button type="submit" class="btn font-weight-bold atlas-cta atlas-cta-wide cta-blue my-3"
+                            data-disable-with="Submit">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    
+
+
     <script>
-        // function handleSubmit() {
-        //     var name = encodeURIComponent(document.getElementById('name').value);
-        //     var email = encodeURIComponent(document.getElementById('email').value);
-        //     var message = encodeURIComponent(document.getElementById('message').value);
-
-        //     var mailtoLink = `mailto:nicola.eschbach@hotmail.com?subject=Contact%20Form%20Eschback-Adventures&body=${message}%0A%0AName:%20${name}%0AEmail:%20${email}%0A%0A`;
-            
-        //     window.location.href = mailtoLink;
-        //     return false;
-        // }
-        // const form = document.getElementById('contactForm');
-
-        // form.addEventListener('submit', function(event) {
-
-        //     form.reset();
-        // });
+        function handleSubmit(form) {
+            form.submit()
+            form.reset();
+            document.getElementById("submit-message").innerText = "Thanks for your message"
+        }
     </script>
 
-	<!-- copyright -->
-	<div class="jumbotron jumbotron-fluid" id="copyright">
+    <!-- copyright -->
+    <div class="jumbotron jumbotron-fluid" id="copyright">
         <div class="container">
             <div class="row justify-content-between">
-            	<div class="col-md-6 text-white align-self-center text-center text-md-left my-2">
+                <div class="col-md-6 text-white align-self-center text-center text-md-left my-2">
                     Copyright © 2024 Nicola Eschbach.
                 </div>
                 <div class="col-md-6 align-self-center text-center text-md-right my-2" id="social-media">
                     <a href="https://www.instagram.com/nicola_eschbach" class="d-inline-block text-center ml-2">
-                    	<i class="fa fa-instagram" aria-hidden="true"></i>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/nicola-eschbach-954ab6227" class="d-inline-block text-center ml-2">
-                    	<i class="fa fa-linkedin" aria-hidden="true"></i>
+                    <a href="https://www.linkedin.com/in/nicola-eschbach-954ab6227"
+                        class="d-inline-block text-center ml-2">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <!-- AOS -->
     <script src="js/aos.js"></script>
     <script>
-      AOS.init({
-      });
+        AOS.init({
+        });
     </script>
 </body>
 
