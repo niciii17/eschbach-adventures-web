@@ -19,36 +19,28 @@
     
     <!-- AOS -->
     <link rel="stylesheet" href="css/aos.css">
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lc7njkqAAAAALOCCjHUqeK8Lwtdi7jxjjdP4Qyf"></script>
     <script>
-        let slideIndex = 0;
-showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
+grecaptcha.ready(function() {
+    e.preventDefault();
+    grecaptcha.enterprise.ready(async () => {
+      const token = await grecaptcha.enterprise.execute('6Lc7njkqAAAAALOCCjHUqeK8Lwtdi7jxjjdP4Qyf', {action: 'contact_form'});
+      document.getElementById('g-recaptcha-response').value = token;
 
-// Show the current slide
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
+    });
+  });
 
-function showSlides(n) {
-    let slides = document.getElementsByClassName("slide");
-    if (n >= slides.length) { slideIndex = 0; }
-    if (n < 0) { slideIndex = slides.length - 1; }
 
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    
-    slides[slideIndex].style.display = "block";
-}
 
-// Auto slide every 5 seconds (optional)
-setInterval(function() {
-    plusSlides(1);
-}, 5000);
+        // grecaptcha.ready(function() {
+        //     // the action: value doesn't matter, it's just a string (see the docs)
+        //     grecaptcha.execute('6Lc7njkqAAAAALOCCjHUqeK8Lwtdi7jxjjdP4Qyf', {action: 'contact_form'})
+        //     .then(function(token) {
+        //         // this is the important part, store the token so it gets sent back to us
+        //         document.getElementById('g-recaptcha-response').value = token;
+        //     });
+        // });
     </script>
 </head>
 
@@ -198,9 +190,6 @@ setInterval(function() {
                 <div class="col-sm-2 col-md-2 py-1 align-self-center">
                     <img src="img/slider_images/imagecarousel-03.jpg" class="mx-auto d-block img-resize">
                 </div>
-                <!-- <div class="col-sm-2 col-md-2 py-1 align-self-center">
-                    <img src="img/slider_images/imagecarousel-04.jpg" class="mx-auto d-block">
-                </div> -->
                 <div class="col-sm-2 col-md-2 py-1 align-self-center">
                     <img src="img/slider_images/imagecarousel-05.jpg" class="mx-auto d-block img-resize">
                 </div>
@@ -210,7 +199,6 @@ setInterval(function() {
                 <div class="col-sm-2 col-md-2 py-1 align-self-center">
                     <img src="img/slider_images/imagecarousel-08.jpg" class="mx-auto d-block img-resize">
                 </div>
-
             </div>
         </div> 
     </div>
@@ -220,11 +208,10 @@ setInterval(function() {
         <div class="container my-5">
             <div class="row justify-content-between">
                 <div class="col-md-6 text-blue">
-                    <h2 class="font-weight-bold">Contact me</h2>
-                    <!-- <p class="my-4">
-                        Te iisque labitur eos, nec sale argumentum scribentur,
-                        <br> augue disputando in vim. Erat fugit sit at, ius lorem.
-                    </p> -->
+                    <h2 class="font-weight-bold">Contact</h2>
+                    <h5 class="my-4 font-italic">
+                        Contact me - to Launch Your Next Adventure!
+                    </h5>
                     <ul class="list-unstyled">
                         <li>Email : nicola.eschbach@hotmail.com</li>
                         <li>Phone : +41 (0) 78 667 77 34</li>
@@ -232,39 +219,57 @@ setInterval(function() {
                     </ul>
                 </div>
                 <div class="col-md-6">
-                    <form id="contactForm" onsubmit="return handleSubmit()">                    	
+                    <!-- <form id="contactForm" onsubmit="return handleSubmit()">                    	 -->
+                        <form 
+                            id="contactForm"
+                            action="https://formkeep.com/f/64eb0a96356a"
+                            accept-charset="UTF-8"
+                            enctype="multipart/form-data"
+                            method="POST"
+                            onsubmit="return handleSubmit()"
+                            target="_blank">
+                            <input type="hidden" name="utf8" value="✓">
+
                         <div class="row">
 	                        <div class="form-group col-md-6">
 	                            <label for="name">Your Name</label>
 	                            <input type="name" class="form-control" id="name">
 	                        </div>
 	                        <div class="form-group col-md-6">
-	                            <label for="Email">Your Email</label>
-	                            <input type="email" class="form-control" id="email">
+	                            <label for="email-address">Your Email</label>
+	                            <input type="email" class="form-control" id="email" id="email-address">
 	                        </div>
 	                    </div>
 	                    <div class="form-group">
 	                        <label for="message">Message</label>
 	                        <textarea class="form-control" id="message" rows="3"></textarea>
 	                    </div>
+                        <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+
                         <button type="submit" class="btn font-weight-bold atlas-cta atlas-cta-wide cta-blue my-3">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
+    
     <script>
-        function handleSubmit() {
-            var name = encodeURIComponent(document.getElementById('name').value);
-            var email = encodeURIComponent(document.getElementById('email').value);
-            var message = encodeURIComponent(document.getElementById('message').value);
+        // function handleSubmit() {
+        //     var name = encodeURIComponent(document.getElementById('name').value);
+        //     var email = encodeURIComponent(document.getElementById('email').value);
+        //     var message = encodeURIComponent(document.getElementById('message').value);
 
-            var mailtoLink = `mailto:nicola.eschbach@hotmail.com?subject=Contact%20Form%20Eschback-Adventures&body=${message}%0A%0AName:%20${name}%0AEmail:%20${email}%0A%0A`;
+        //     var mailtoLink = `mailto:nicola.eschbach@hotmail.com?subject=Contact%20Form%20Eschback-Adventures&body=${message}%0A%0AName:%20${name}%0AEmail:%20${email}%0A%0A`;
             
-            window.location.href = mailtoLink;
-            return false;
-        }
+        //     window.location.href = mailtoLink;
+        //     return false;
+        // }
+        const form = document.getElementById('contactForm');
+
+        form.addEventListener('submit', function(event) {
+
+            form.reset();
+        });
     </script>
 
 	<!-- copyright -->
@@ -278,12 +283,6 @@ setInterval(function() {
                     <a href="https://www.instagram.com/nicola_eschbach" class="d-inline-block text-center ml-2">
                     	<i class="fa fa-instagram" aria-hidden="true"></i>
                     </a>
-                    <!-- <a href="#" class="d-inline-block text-center ml-2">
-                    	<i class="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                    <a href="#" class="d-inline-block text-center ml-2">
-                    	<i class="fa fa-medium" aria-hidden="true"></i>
-                    </a> -->
                     <a href="https://www.linkedin.com/in/nicola-eschbach-954ab6227" class="d-inline-block text-center ml-2">
                     	<i class="fa fa-linkedin" aria-hidden="true"></i>
                     </a>

@@ -250,27 +250,22 @@ img {
     }
 }
 
-@media (min-width: 576px) {
-    .img-resize {
-        transition: transform 0.3s ease-in-out;
-    }
-    
-    .img-resize:hover {
-        transition: transform 0.4s ease-in-out;
-        transform: scale(1.12);
-    }
+.img-resize {
+    transition: transform 0.3s ease-in-out;
+}
+
+.img-resize:hover {
+    transition: transform 0.4s ease-in-out;
+    transform: scale(1.15);
 }
 
 
 @media (max-width: 576px) {
     .img-resize {
-        transition: transform 0.3s ease-in-out;
         padding: 10px 60px 10px 60px;        
     }
 
     .img-resize:hover {
-        transition: transform 0.4s ease-in-out;
-        transform: scale(1.05);
+        transform: scale(1.1);
     }
 }
-
