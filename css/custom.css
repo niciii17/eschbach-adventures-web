@@ -269,3 +269,7 @@ img {
         transform: scale(1.1);
     }
 }
+
+.grecaptcha-badge{
+    display: none;
+}
