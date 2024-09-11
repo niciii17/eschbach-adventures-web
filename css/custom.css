@@ -19,9 +19,38 @@ button {
     cursor: pointer;
 }
 
+.header {
+    height: 100vh; 
+    background-image: url("../img/background-banner.jpg");
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 90%, 0 100%);
+}
+
 .jumbotron {
     margin-bottom: 0 !important;
     background-position: 78%;
+}
+
+.arrow-down {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+}
+
+.arrow-down a {
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    transform: translateX(-50%)
+}
+
+.arrow-down img{
+    height: 3em;
+    animation: moveUpDown 2s infinite ease-in-out;
+}
+
+.arrow-down a:hover{
+    /* transform: translateX(-50%) scale(1.2) */
+    animation: zoomIn 1s forwards;
 }
 
 .atlas-cta {
@@ -195,32 +224,10 @@ img {
 
 }
 
-/* .list-unstyled li:nth-child(2n) {
-    background-color: red;
-} */
-
 .list-unstyled li {
     padding: 8px 0;
 }
 
-.arrow-down {
-    position: absolute;
-    bottom: 5px;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centers the image horizontally */
-    align-items: center;  
-}
-
-.arrow-down img{
-    height: 3em; /* 1em makes the image height equal to the line height */
-    vertical-align: middle; 
-    animation: moveUpDown 2s infinite ease-in-out;
-}
-
-.arrow-down:hover {
-    animation: zoomIn 0.5s forwards; /* Trigger animation on hover */
-}
 
 /********** RWD **********/
 @media (max-width: 575px) {
@@ -231,10 +238,10 @@ img {
 
 @keyframes zoomIn {
     from {
-        transform: scale(1);
+        transform: translateX(-50%) scale(1);
     }
     to {
-        transform: scale(1.2);
+        transform: translateX(-50%) scale(1.3);
     }
 }
 
