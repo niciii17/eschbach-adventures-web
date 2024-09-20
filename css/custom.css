@@ -42,7 +42,7 @@ button {
     }
 }
 
-@media (max-width: 900px) and (orientation:landscape) {
+@media (max-height: 500px) and (orientation:landscape) {
     .header {
         clip-path: polygon(0 0, 100% 0, 90vw 50svh, 100svw 100svh, 0 100svh);
     }
@@ -76,7 +76,7 @@ button {
     animation: zoomIn 1s forwards;
 }
 
-@media (max-width: 900px) and (orientation:landscape) {
+@media (max-height: 500px) and (orientation:landscape) {
     .arrow-down {
         bottom: 0;
         right: 6px;
