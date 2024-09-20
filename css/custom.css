@@ -333,3 +333,8 @@ img {
 .grecaptcha-badge {
     display: none;
 }
+
+::selection {
+    background-color: #121a2e;
+    color: #fff;
+}
